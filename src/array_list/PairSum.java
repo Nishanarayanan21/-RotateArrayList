@@ -1,18 +1,23 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 
-public class RemoveConsecutiveDuplicates
+public class PairSum
 {
     public boolean hasPairWithSum(ArrayList<Integer> list, int target)
     {
         HashSet<Integer> set = new HashSet<>();
 
-        for(int x : list)
+        for (int x : list)
         {
-            if(set.contains(target - x))
+            if (set.contains(target - x))
+            {
                 return true;
+            }
 
             set.add(x);
         }
+
         return false;
     }
 
